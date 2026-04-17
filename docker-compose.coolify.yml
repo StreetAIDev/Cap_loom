@@ -101,6 +101,7 @@ services:
   minio-setup:
     container_name: cap-minio-setup
     image: minio/mc:latest
+    restart: "no"
     depends_on:
       minio:
         condition: service_healthy
